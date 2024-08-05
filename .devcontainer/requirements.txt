@@ -1,0 +1,14 @@
+requests
+pydantic
+tqdm
+pandas
+ipykernel
+ipywidgets
+jupyter
+fastapi
+fastapi[standard]
+ruff
+pytest
+pytest-cov
+taskipy
+ignr
