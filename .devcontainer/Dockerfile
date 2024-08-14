@@ -10,10 +10,7 @@ COPY requirements.txt set_python_env.sh /requirements/
 
 RUN apt-get update && \
     apt-get install tree && \
-    apt-get install -y --no-install-recommends \
-        awscli \
-        && \
-    rm -rf /var/lib/apt/lists/*
+    apt-get install sqlite3
 
 
 RUN bash ./requirements/set_python_env.sh $PYTHON_ENV

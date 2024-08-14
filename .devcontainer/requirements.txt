@@ -13,3 +13,5 @@ pytest-cov
 taskipy
 ignr
 sqlalchemy
+pydantic-settings
+alembic

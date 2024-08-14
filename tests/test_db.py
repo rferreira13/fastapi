@@ -1,9 +1,16 @@
+from sqlalchemy import select
+
 from fast_zero.models import User
 
 
-def test_create_user():
+def test_create_user(session):
     user = User(
         username="teste", email="teste@gmail.com", password="minha_senha"
     )
+    session.add(user)
+    session.commit()
+    result = session.scalar(
+        select(User).where(User.email == "teste@gmail.com")
+    )
 
-    assert user.username == "teste"
+    assert result.username == "teste"
