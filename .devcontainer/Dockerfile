@@ -24,3 +24,11 @@ RUN bash ./requirements/set_python_env.sh $PYTHON_ENV
 
 # test = "pytest -s -x --cov=fast_zero -vv"
 # post_test = "coverage html"
+
+# alembic init migrations
+
+# alembic revision --autogenerate -m "message"
+
+# alembic upgrade head
+
+# sqlite3 database.db
