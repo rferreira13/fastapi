@@ -1,0 +1,7 @@
+mkdocs new .
+
+mkdocs serve
+
+git config --global --add safe.directory /workspaces/fastapi
+
+mkdocs gh-deploy

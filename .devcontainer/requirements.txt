@@ -15,3 +15,6 @@ ignr
 sqlalchemy
 pydantic-settings
 alembic
+mkdocs
+pymdown-extensions
+mkdocs-material

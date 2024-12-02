@@ -10,7 +10,8 @@ COPY requirements.txt set_python_env.sh /requirements/
 
 RUN apt-get update && \
     apt-get install tree && \
-    apt-get install sqlite3
+    apt-get install sqlite3 && \
+    apt-get install -y git
 
 
 RUN bash ./requirements/set_python_env.sh $PYTHON_ENV
