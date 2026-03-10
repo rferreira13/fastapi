@@ -1,14 +1,16 @@
-site_name: Live de Python
+site_name: Estudos de FastAPI
 theme:
   name: material
+  logo: assets/FastAPI.svg
+  favicon: assets/FastAPI.svg
   palette:
     - scheme: default
-      primary: purple
+      primary: light green
       toggle:
         icon: material/weather-night
         name: Modo noturno
     - scheme: slate
-      primary: deep purple
+      primary: light green
       toggle:
         icon: material/weather-sunny
         name: Modo claro

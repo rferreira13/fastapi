@@ -1,4 +1,4 @@
-from pydantic import BaseModel, ConfigDict, EmailStr
+from pydantic import BaseModel, EmailStr
 
 
 class Message(BaseModel):
@@ -11,15 +11,14 @@ class UserSchema(BaseModel):
     password: str
 
 
-class UserDB(UserSchema):
-    id: int
-
-
 class UserPublic(BaseModel):
     id: int
     username: str
     email: EmailStr
-    model_config = ConfigDict(from_attributes=True)
+
+
+class UserDB(UserSchema):
+    id: int
 
 
 class UserList(BaseModel):

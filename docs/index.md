@@ -1,54 +1,16 @@
-# Welcome to MkDocs
+# Introdução
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Esta documentação é quase inteiramente baseada nas aulas do [cuso de FastAPI](https://www.youtube.com/watch?v=QShMRcicxnE&list=PLOQgLBuj2-3IuFbt-wJw2p2NiV9WTRzIP&index=1) produzido pelo [Eduardo Mendes](https://dunossauro.com/).
 
-## Commands
+Qualquer semelhança desta documentação com a [página do curso de FastAPI do Eduardo Mendes](https://fastapidozero.dunossauro.com/) é absolutamente intencional.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+A ideia dessa documentação é a de demonstrar meus conhecimentos na utilização de FastAPI. Desta forma irei publicar exemplos de aplicações em FastAPI que irão em quase sua totalidade os exemplos do curso mencionado, e em seguida, irei trazer minhas discussões e explorações em cima dos exemplos.
 
+Espero com essa documentação ser forçado a publicar mais.
 
-:snake: 
+Durante as minhas explorações irei procurar trazer informações da [documentação oficial do FastAPI](https://fastapi.tiangolo.com/).
 
-## Project layout
+## Estrutura
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+Inicialmente irei expor como criei meu ambiente de desenvolvimento
 
-
-```{.py3 hl_lines="1-3" linenums="55" title="arquivo.py"}
-def xpto():
-    """
-    Docstring
-    """
-    return True
-```
-## Custom fences
-```mermaid
-flowchart LR
-    A --o B
-    B --x C
-```
-
-
-```mermaid
-classDiagram
-    teste <|-- outro
-```
-
-```mermaid
-classDiagram
-    Pessoa <|-- Eduardo
-    class Pessoa{
-        +String nome
-        +Int idade
-        +metodo(self): bool
-    }
-    class Eduardo{
-        
-    }
-```
