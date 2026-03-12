@@ -11,6 +11,7 @@ ruff
 pytest
 pytest-cov
 taskipy
+typos
 ignr
 sqlalchemy
 pydantic-settings

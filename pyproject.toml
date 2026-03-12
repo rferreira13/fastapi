@@ -3,12 +3,15 @@ name = "fast_zero"
 version = "0.1.0"
 description = ""
 authors = [
-    {name = "dunossauro",email = "mendesxeduardo@gmail.com"}
+    { name = "Rafael", email = "rafamarinho87@gmail.com" }
 ]
 readme = "README.md"
 requires-python = ">=3.11,<4.0"
 dependencies = [
-    "fastapi[standard] (>=0.135.1,<0.136.0)"
+    "alembic (>=1.18.4,<2.0.0)",
+    "fastapi[standard] (>=0.135.1,<0.136.0)",
+    "pydantic-settings (>=2.13.1,<3.0.0)",
+    "sqlalchemy (>=2.0.48,<3.0.0)"
 ]
 
 [dependency-groups]
@@ -22,30 +25,33 @@ dev = [
 
 [tool.ruff]
 line-length = 79
-extend-exclude = ['migrations']
+extend-exclude = ["migrations", "docs"]
 
 [tool.ruff.lint]
 preview = true
-select = ['I', 'F', 'E', 'W', 'PL', 'PT']
+select = ["I", "F", "E", "W", "PL", "PT"]
 
 [tool.ruff.format]
 preview = true
-quote-style = 'single'
+quote-style = "single"
+
+[tool.typos.files]
+extend-exclude = ["docs"]
+
+[tool.coverage.run]
+omit = ["docs/*"]
 
 [tool.pytest.ini_options]
 pythonpath = "."
-addopts = '-p no:warnings'
+addopts = "-p no:warnings"
+norecursedirs = ["docs"]
 
 [tool.taskipy.tasks]
-pre_lint = 'typos'
-lint = 'ruff check'
-pre_format = 'ruff check --fix'
-format = 'ruff format'
-run = 'fastapi dev fast_zero/app.py'
-pre_test = 'task lint'
-test = 'pytest -s -x --cov=fast_zero -vv'
-post_test = 'coverage html'
-
-[build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
-build-backend = "poetry.core.masonry.api"
+pre_lint = "typos"
+lint = "ruff check"
+pre_format = "ruff check --fix"
+format = "ruff format"
+run = "fastapi dev fast_zero/app.py"
+pre_test = "task lint"
+test = "pytest -s -x --cov=fast_zero -vv"
+post_test = "coverage html"

@@ -124,7 +124,7 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
+# .env
 .venv
 env/
 venv/
@@ -173,8 +173,8 @@ poetry.toml
 # LSP config files
 pyrightconfig.json
 
-database.db
-
 # End of https://www.toptal.com/developers/gitignore/api/python
 
-# Generated using ignr.py - github.com/Antrikshy/ignr.py
+# Generated using ignr.py - github.com/Antrikshy/ignr.pydatabase.db
+
+database.db
